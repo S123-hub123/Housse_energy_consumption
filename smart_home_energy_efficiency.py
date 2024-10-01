@@ -90,6 +90,7 @@ for epoch in range(num_epochs):
 model.eval()  # Set the model to evaluation mode
 with torch.no_grad():
     predicted_energy = model(X_test)
+
     predicted_energy = scaler.inverse_transform(predicted_energy.numpy())
 
 # Step 6: Visualize the results
